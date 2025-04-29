@@ -58,9 +58,10 @@ SmartShopManagementSystem/
 
 ## Contributors
 
-- [Your Name] (Main Developer)
-- [Friend's Name] (GUI Developer)
-
+- Hannah Keowo (Main Developer)
+- Mohammed Farhan (GUI Developer)
+- Abigail Hunt (developer / editor)
+- Abdelrahman Mohamed ( developer / Tester)
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
