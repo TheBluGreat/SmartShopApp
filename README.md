@@ -19,7 +19,7 @@ This project is a simple and user-friendly Java-based GUI application designed t
 
 1. **Clone the repository:**
    ```bash
-   git clone [repository URL]
+   git clone [https://github.com/TheBluGreat/SmartShopApp.git]
    ```
 
 2. **Navigate to the project directory:**
