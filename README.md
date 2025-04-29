@@ -55,6 +55,7 @@ SmartShopManagementSystem/
 - **Manage Products:** Add, update, remove, or view products via the intuitive GUI.
 - **Record Sales:** Easily record sales, automatically updating inventory quantities.
 - **Generate Reports:** Generate and save detailed reports on sales and current inventory levels to a text file.
+- **Exit:** Terminate the Program. 
 
 ## Contributors
 
@@ -68,4 +69,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Contact
 
-For questions or suggestions, please reach out via [your contact information].
+For questions or suggestions, please reach out via Email: 25346377@edgehill.ac.uk
