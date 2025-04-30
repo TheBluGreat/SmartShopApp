@@ -12,6 +12,7 @@ public class SalesManager {
         this.productManager = productManager;
     }
 
+    //method for recording sale
     public void recordSale() {
         List<Product> products = productManager.getProducts();
         if (products.isEmpty()) {
@@ -19,11 +20,13 @@ public class SalesManager {
             return;
         }
 
+        //stringBuilder to create product list
         StringBuilder productList = new StringBuilder();
         for (int i = 0; i < products.size(); i++) {
             productList.append((i + 1)).append(". ").append(products.get(i)).append("\n");
         }
 
+        //displays the product list to sell
         String indexInput = JOptionPane.showInputDialog("Choose a product:\n" + productList);
         try {
             int index = Integer.parseInt(indexInput) - 1;
@@ -31,12 +34,19 @@ public class SalesManager {
 
             String quantityInput = JOptionPane.showInputDialog("Enter quantity to sell:");
             int quantity = Integer.parseInt(quantityInput);
+            //exception handling for sales value less than 0
+            if (quantity <0) {
+                JOptionPane.showMessageDialog(null, "Sale quantity cannot be less than 0", "ERROR", JOptionPane.ERROR_MESSAGE);
+                return;
+            }
 
+            //function for getting the total price of products sold
             if (quantity <= product.getQuantity()) {
                 product.setQuantity(product.getQuantity() - quantity);
                 double total = quantity * product.getPrice();
                 totalSalesAmount += total;
 
+                //formatting for the responsive confirmation of sale record
                 String record = "Product: " + product.getName() +
                         "| Quantity Sold: " + quantity +
                         "|  Total: £" + total +
@@ -45,6 +55,7 @@ public class SalesManager {
 
                 JOptionPane.showMessageDialog(null, "Sale recorded.");
             } else {
+                //exception handling for insufficient stock
                 JOptionPane.showMessageDialog(null, "Not enough stock.");
             }
         } catch (Exception e) {
@@ -52,23 +63,28 @@ public class SalesManager {
         }
     }
 
+    //method for displaying sale record
     public void displaySales() {
         if (sales.isEmpty()) {
             JOptionPane.showMessageDialog(null, "No sales recorded.");
             return;
         }
+        //Stringbuilder to store sales reccords
         StringBuilder sb = new StringBuilder();
         for (String s : sales) {
             sb.append(s).append("\n");
         }
+
+        //formatting for sales
         sb.append("\nTotal Sales Revenue: £").append(String.format("%.2f", totalSalesAmount));
         JOptionPane.showMessageDialog(null, sb.toString(), "Sales Records", JOptionPane.INFORMATION_MESSAGE);
     }
-
+    //method for retriving sales data
     public List<String> getSales() {
         return sales;
     }
 
+    //method for getting total sales amount
     public double getTotalSalesAmount() {
         return totalSalesAmount;
     }
