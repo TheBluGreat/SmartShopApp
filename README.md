@@ -59,7 +59,7 @@ SmartShopManagementSystem/
 
 ## Contributors
 
-- Hannah Keowo (Main Developer)
+- Hannah Keown (Main Developer)
 - Mohammed Farhan (GUI Developer)
 - Abigail Hunt (developer / editor)
 - Abdelrahman Mohamed ( developer / Tester)
